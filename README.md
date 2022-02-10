@@ -19,10 +19,6 @@ _**IMPORTANT NOTES**_: *
 
 This extension has surpassed where I was going to take it.  Considering a pay scheme (cheap, e.g. $10 - $20), with free usage up to the # of to-be-determined number of parsed components.
 
-**Note the license, this codebase is NOT permitted to be copied or distributed without my permission.**
-
-I left the codebase public because I think I have it to where it's a good example for a general VSCode extension, with unit testing and coverage (via nyc/istanbul) of both client, server, ad the shared library.  The nly shortcoming of the coverage is that I could not figure out how to get the server code covered during the client test.  NYC has a `useSpawnWrap` option that captures spawned processes for coverage, but I cant get it to find the server process launched by the client.  SOseparate tests are written for the server.  If anyone can figure that out, I'll offer a $100 cash reward lol, I got pretty frustrated with it and put it down after a while, and went another way.  
-
 ## Table of Contents
 
 - [ExtJs Intellisense - Code Completion, and More](#extjs-intellisense---code-completion-and-more)
