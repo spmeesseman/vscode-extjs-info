@@ -1,0 +1,229 @@
+
+AST Parser:
+
+	✔ Store property 'type' and mappings @done(21-08-21 09:22)
+	☐ Additional properties needed for models
+
+Completion:
+
+	✔ xtype cmopletion is displaying outside of blocks, i.e. comments @done(21-08-20 23:51)
+	✔ xtype selection is double printing xtype if already typed in and into the string part @done(21-08-15 19:17)
+	✔ Add mixin config to syntax tree parsing @done(21-08-13 14:35)
+		Process as an extended class for properties/configs/methods
+	☐ When writing method parameters, and they are line broken (i.e. object param), method signature breaks
+	✔ Inline does not work when preceded by 'await ' (or probably any other word) @done(21-08-13 17:08)
+	✔ Main namespace inline does not work.  e.g. 'Ext', or 'VSCodeExtJS', 'GEMS' @done(21-08-17 23:44)
+	✔ For instance properties, the 'go to definition' should go to the declaration, not the definition @done(21-08-21 08:55)
+		the 'go to type definition' works as intended and goes to the definition
+	☐ The 'this' property needs to check for function scope, currently 'this' is always the main cmp instance
+	✔ dot completion - doesnt work if there are characters to the right @done(21-08-21 08:53)
+		e.g.: app.js line 85, remove some of 'PhysicianDropdown' and try typing it in again
+		it will only work if the typing is coming left to right and there are no chars to the right
+		remove it to the left dot, then it gives instance components.  fix weird things here.
+	✔ Instance properties should not show when the class name is typed @done(21-08-21 08:54)
+		i.e. "VSCodeExtJS." should not display "testFn" unless it was a singleton or the method was in a 'statics' block
+	✔ Implement 'singleton' - display on classname typing, not instance @done(21-08-21 08:54)
+	✔ Implement 'statics' block - display on classname typing, not instance @done(21-08-18 20:35)
+	✔ Completion for store 'type' same as 'xtype' @done(21-08-21 14:19)
+	☐ Should work for a string in a requires/uses/models/stores block should display the doc for that class
+	☐ Static create() for stores/models/?
+	✔ The 'privates' block should be applied to instance components @done(21-08-21 03:51)
+		object completion showing model fields as opposed to properties/configs
+	☐ Snippet completion, i.e. sorte... and the completion item would be the entire sorter object
+		sorters: [{
+			property: "",
+			direction: "ASC"
+		}]
+		And place cursor into property value quotes. Can do for store filters, sorters, model fields, etc
+		Configurable template file?
+	✔ Models.  And the special config applied to 'fields'. @done(21-09-04 13:18)
+	☐ Model property getter/setter when using associations
+	☐ Component store property string literal completion, like xtype/type
+	☐ Store model property string literal completion, like xtype/type
+	☐ Apply defaults for 'items'
+		look for xtype and apply same logic as if it was in item object itself
+	☐ Grid columns, column config
+	✔ Statics on main app inline. @done(21-09-06 15:51)
+		i.e. GEMS.user.  'user' properties do not have completion
+		Scan for GEMS.user= in alll files?  Or create static file mapping to types (like eslint globals)
+	☐ Main app inline
+		i.e. GEMS.model, GEMS.store, 'model', 'store' completion does not show any items
+	✔ Highlight a word in a comment, type x, and the xtype completion items appear. @done(21-09-04 13:19)
+		behind comments no completion should happen
+	☐ Ext.Ajax.* does not work
+		Probably more singletons likes this don't work too
+		Ajax is in completion list after Ext., but nothing with Ext.Ajax.
+	✔ after = inline class doesnt work @done(21-09-12 20:56)
+		VSCodeExtJSApp.user = VSCodeExtApp.model.user.User
+		no completion after the '=' sign
+	✔ In comments still firing in some places @done(21-09-12 20:46)
+	    /**
+	     * @param {Ext.container} remove If `true`, removes...... [getting completion here]
+		 */
+	✔ Local instance vars with multiple down/up/prev/next @done(21-09-11 18:44)
+		e.g. const asrButton = view.up('app-main').down('asrbutton');
+		typing asrButton. shows nothing
+	☐ Private methods and properties should show in the file that defines them even if 'show private' setting is off
+
+Definition:
+
+	✔ Store - go to definition for 'type' same as 'xtype' @done(21-08-21 18:54)
+	☐ Models
+	☐ Children of alias do not work
+		e.g. AppUtils.GridColumn
+	☐ Local instance vars with multiple down/up/prev/next
+		e.g. const asrButton = view.up('app-main').down('asrbutton');
+		no definition found for asrButton
+
+Diagnostics:
+
+	☐ dot notation.  pretty much same validation as for requires[] but diff in code blocks (warning vs. error)
+	✔ 'uses' property.  same validation as for requires[] @done(21-08-15 18:46)
+	☐ packages not @sencha should have xtype validation.  currently not validated if namespace name begins w Ext
+	☐ (warning) for deprecated property/config/method/class use
+		configuration setting - on/off
+	✔ Requires - marks onvalid when a class reference is to an alternateClassName @done(21-08-13 15:33)
+		e.g. App.model.user.User as alternate but namespace sees App.model.User
+	☐ Method parameter validation against types in jsdoc
+	✔ Store diagnostics for 'type' same as 'xtype' @done(21-08-22 00:01)
+	✔ The 'models' and 'stores' property in Application.js should be validated like 'requires' and 'uses' @done(22-01-20 23:13)
+	☐ the 'uses' validation should have separate error code from 'requires'
+	✔ 'mixins' property.  same validation as for requires[] and uses[].  separate error code. (see above too) @done(21-08-26 14:08)
+	✔ Store - for 'model' field @done(21-08-26 14:08)
+	✔ The 'type' property is not validated right if not a store, i.e. 'layout' config "type: 'vbox'" @done(21-08-26 14:08)
+		map type aliases i.e. 'store.', 'layout.', etc
+	✔ Model fields @done(21-08-31 22:41)
+		for object param to create() and new
+	☐ Invalidate inline Ext.define in controller files
+		configuration setting - on/off
+	✔ Invalidate requires for .create @done(22-01-21 04:18)
+		VSCodeExtJSApp.user = VSCodeExtApp.model.user.User.create(...)
+		Checkrequires array for VSCodeExtApp.model.user.User
+		configuration setting - on/off
+	✔ Model reference {} object - 'type' field is showing invalid @done(21-08-26 18:11)
+	✔ Model fields 'type' i.e. 'string' is getting validated and showing as no reference found @done(21-08-25 23:07)
+		make an 'ignoreTypes' srray setting, include 'string', 'number', etc, and user can add to list
+	✔ Store types are invalidated if they are not in 'store' or viewModel 'stores' @done(22-01-20 23:04)
+		e.g. SettingsWinModel.js this.setStores()
+	☐ Action to ignore additional 'type' fields
+		should reference parent object - can leave types on for stores, etc, but turn off for other parent obj
+	✔ Add grid 'filter' type to validation @done(22-01-27 21:40)
+		Grid filter usees 'type' to reference stores in some cases e.g. User Mgmt grid.js filter: { type: 'yesno' ... }
+	✔ Deeply nested store types still invalidate @done(21-09-01 00:45)
+		e.g. User Mgmt AppUtilities.js line 6978
+	☐ Invalidate improper static/private
+		e.g. private call only on instances, static calls only on full classpath names or alternateClassNames
+	✔ Ensure require should examine requires block up the inheritance tree, and up reference tree @done(21-09-21 22:34)
+		each requires should read the requires for that defined component, and up
+	✔ extend: 'Ext.app.ViewController' is invalidated @done(21-09-04 13:20)
+	✔ Requires with .* are invalidated @done(22-01-16 18:52)
+	✔ 'types' that include a dash character are invalidated e.g. { type: 'calendar-events' } @done(22-01-16 18:51)
+	✔ Store viewmodel type is invalidated @done(22-01-20 23:01)
+		{ stores: { departments: { type: 'departments' } } }
+	☐ inline creates() invalidates doesnt take into account alias class name
+		Ext.create('GEMS.model.user.UserPoolXRef') gets invalidated even with proper require
+	✔ Suggesions 'add to require' doesnt work for inline create() warnings @done(22-01-27 13:38)
+	☐ Add settings to turn different error type validations into warning/error (yellow/red0)
+	✔ 'type' property value for viewModel: { type: '...' } is always invalidated @done(22-02-02 23:37)
+	☐ store types with more than one path level always invalidated
+		i.e. store.user.users, referenced by store: { type: 'user.users' } is always invalidated
+	☐ model types in references are invalidated if def is present in Application.js
+		reference
+        {
+            type: 'Department', <- invalidated even if App.model.Department is in 'models' or 'requires' of Application.js
+            role: 'department',
+            unique: true
+        }
+
+JsDoc:
+
+	☐ If jsdoc isn't present for an overridden method, then check for parent method jsdoc
+	✔ Handle the inheritdoc tag @done(22-01-27 19:49)
+	✔ Handle links @done(21-09-21 22:31)
+	✔ Make type doc line class part a link @done(22-01-27 18:59)
+		i.e. 'class component: Ext.Component', make Ext.Component a gotto def link 
+	✔ Hovering over a string in a requires/uses/models/stores block should display the doc for that class @done(22-01-27 16:04)
+		GoTo Def does.
+	✔ goto definition for jsdoc parameter types (surrounded with{}) @done(22-01-27 17:03)
+	✔ Main parsed hover markdown needs reformatting @done(21-08-29 15:41)
+		commentParser.js
+		Put type header in parser instead of adding separately in completion provider
+		Format and remove all @ markers
+	✔ Object properties @done(22-01-27 16:05)
+		e.g., xtype: 'viewtoolbar', noRemoteActions: true, ....' ... show doc for all ocnfigs/props like noRemoteActions
+	✔ Method doc needs work @done(21-09-05 11:25)
+		title line should contain params
+		i think doc is better in one spot than the other, i.e. completion vs.hover, cant remember
+	✔ Local instance vars with multiple down/up/prev/next @done(22-01-27 17:54)
+		e.g. const asrButton = view.up('app-main').down('asrbutton');
+		hover over asrButton anywhere in the function shows nothing
+	✔ Multi-type tag does not get parsed, i.e. {Boolean|String}, parameter is missing in doc @done(21-09-21 22:31)
+
+Miscellaneous:
+
+	☐ Server module nyc instrumentation
+	☐ Server cannot break on common module code (ts) while debugging
+	Move as much functionality to server side as possible:
+		✔ JsDoc parser @done(21-08-29 11:52)
+		☐ Hover?
+		☐ Completion?
+		need to step into js code from calling ts server code
+	✔ Fault tolerance in AST parser @done(21-08-28 13:26)
+	✔ add 'clear ast cache' or 'reindex' task for chance becomes corrupt @done(21-08-08 14:15)
+	✔ Configs and variable level cache mappings need to be separated by a 3rd project dimension @high @done(21-08-23 16:00)
+		Separate again using project name (workspace dir name)
+		currently only [namespace][componentname].  needs to be [project][namespace][componentname]
+	✔ Indexing should disable when opening an ExtJs file but the project has not been indexed (no .extjsrc or app.json) @done(21-08-13 16:52)
+	✔ When workspace opens, should be able to detect files that have been modified outside the env and re-index @done(21-09-04 00:17)
+	✘ FS cache - check to see if can get away with not persisting object range info @cancelled(21-08-29 07:17)
+		i think this is only used on the active document, which is always re-indexed anyway when opened
+	✔ Namespace can be removed from mapping references throughout code @done(21-08-26 18:12)
+	✔ Packages referenced from app.json should have own cache location @done(21-09-21 22:35)
+		use pkg namespace name extracted from pacage.json in pkg dir
+		currently get stored in main app namespace storage file
+	✔ Object ranges don't have to persist to cache. @done(21-08-28 10:24)
+		Can be parsed for active document only (I think).
+		remove todo comment in the code
+	☐ Max doc size for parsing.  configurable
+	✔ Add 'framework' property to extjsrc file @done(21-08-28 10:24)
+		so can reference a framework per project, located somewhere outside of project, no app.json
+		same as setting multiple paths in classpath in array but will keep separate in storage, better perf
+	☐ Aliases should not be added to xtypes for widget scraping now that all is implemented
+		syntaxTree.js parseClassDef
+	✔ Renamed/moved file doesnt get cached.  validates, but no hover, completion, etc @done(21-08-28 10:24)
+	✔ if a doc is edited, closed w/o saving, mem cache needs to be reset @high @done(22-01-27 22:43)
+		fs cache will hold previous value still, since no persist until save
+	☐ Review namespace usage
+		is it correct to use 'name' property from app.json
+		namespace property in package.json files sencha cfg
+		namespace property in sass ad other app.json cfg objects
+	☐ Support post Cmd6.7+ projects with npm installed ext-core
+	☐ Cmd project package.json
+		subfolders property, refernces to all cmd packages
+	☐ Manual instance mapping
+		e.g. configuration setting to treat all instances of App.facility as App.model.facility.Facility
+	✔ 'fix requires' ifno requires array exists @done(22-01-27 17:25)
+		it is created correctly, but is tabbed over twoce instead of once
+	☐ COnfigurable user type.  i.e. can define 'leftStore' to be trated like type 'store'.
+		leftStore: { type: 'chained', ... }
+	✔ Renaming file cause 'duplicate reference' warning @done(22-01-16 18:51)
+
+Signature:
+
+	☐ Static create() for stores/models/?
+	☐ DataUtils.ajaxRequest no signature
+		Other DataUtils.*?
+
+Task View:
+	
+	✔ Shell @done(21-08-29 10:22)
+	☐ ExtJs code snippets
+		e.g. an Ext.create('Ext.util.DelayedTask', {...
+	☐ create Ext.define file from template
+		Prompt for dir/filename, or add to open empty document
+	☐ map to shortcut keys setting
+
+Type Definition:
+
+	✔ go to type definition for 'type' same as 'xtype' @done(21-08-21 18:54)
+	☐ Models

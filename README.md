@@ -10,10 +10,10 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/spmeesseman/vscode-extjs/badge)](https://www.codefactor.io/repository/github/spmeesseman/vscode-extjs)
 [![app-publisher](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-app--publisher-e10000.svg)](https://github.com/spmeesseman/app-publisher)
 
-[![GitHub issues open](https://img.shields.io/github/issues-raw/spmeesseman/vscode%2dextjs.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs/issues)
-[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/spmeesseman/vscode%2dextjs.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/spmeesseman/vscode%2dextjs.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs/pulls)
-[![GitHub last commit](https://img.shields.io/github/last-commit/spmeesseman/vscode%2dextjs.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs)
+[![GitHub issues open](https://img.shields.io/github/issues-raw/spmeesseman/vscode%2dextjs%2dinfo.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs-info/issues)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/spmeesseman/vscode%2dextjs%2dinfo.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs-info/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/spmeesseman/vscode%2dextjs%2dinfo.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs-info/pulls)
+[![GitHub last commit](https://img.shields.io/github/last-commit/spmeesseman/vscode%2dextjs%2dinfo.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs-info)
 
 _**IMPORTANT NOTES**_: *
 
@@ -105,7 +105,7 @@ The **.extjsrc** file can contain any of the defined properties of a Sencha ExtJ
 1. name
 2. classpath
 
-See [here](https://github.com/spmeesseman/vscode-extjs/blob/master/client/testFixture/.extjsrc.json?raw=true) for a simplified example .extjsrc file.
+See [here](https://github.com/spmeesseman/vscode-extjs-info/example/.extjsrc.json?raw=true) for a simplified example .extjsrc file.
 
 ### Configuration - The `name` Property (Required)
 
@@ -395,10 +395,10 @@ Whenever I start a project I always look for a good base to start from and for t
 ## Feedback & Contributing
 
 - Please report any bugs, suggestions or documentation requests via the
-  [Issues](https://github.com/spmeesseman/vscode-extjs/issues)
+  [Issues](https://github.com/spmeesseman/vscode-extjs-info/issues)
 - Feel free to submit
-  [Pull Requests](https://github.com/spmeesseman/vscode-extjs/pulls)
-- [Contributors](https://github.com/spmeesseman/vscode-extjs/graphs/contributors)
+  [Pull Requests](https://github.com/spmeesseman/vscode-extjs-info/pulls)
+- [Contributors](https://github.com/spmeesseman/vscode-extjs-info/graphs/contributors)
 
 ### Rate It - Leave Some Stars
 
@@ -410,7 +410,7 @@ If my work and this extension has made your life easier, consider a [donation](h
 
 ## TODO
 
-See the [current TODO List](https://github.com/spmeesseman/vscode-extjs/blob/master/.todo?raw=true).  Tracked using the [TODO+ VSCode Extension](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus).
+See the [current TODO List](https://github.com/spmeesseman/vscode-extjs-info/blob/master/.todo?raw=true).  Tracked using the [TODO+ VSCode Extension](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus).
 
 ## Open Source Projects
 
@@ -441,6 +441,6 @@ See the [current TODO List](https://github.com/spmeesseman/vscode-extjs/blob/mas
 |SecurityExtend|MantisBT SPAM Filter|[GitHub](https://github.com/mantisbt-plugins/SecurityExtend)|[GitHub Releases](https://github.com/mantisbt-plugins/SecurityExtend/releases)|
 |ServerFiles|MantisBT Server File Editor|[GitHub](https://github.com/mantisbt-plugins/ServerFiles)|[GitHub Releases](https://github.com/mantisbt-plugins/ServerFiles/releases)|
 |svn-scm-ext|VSCode SVN Extension|[GitHub](https://github.com/spmeesseman/svn-scm-ext)|[Visual Studio Marketplace](https://marketplace.visualstudio.com/itemdetails?itemName=spmeesseman.svn-scm-ext)|
-|vscode-extjs|VSCode ExtJS Intellisense|[GitHub](https://github.com/spmeesseman/vscode-extjs)|[Visual Studio Marketplace](https://marketplace.visualstudio.com/itemdetails?itemName=spmeesseman.vscode-extjs)|
+|vscode-extjs|VSCode ExtJS Intellisense|[GitHub](https://github.com/spmeesseman/vscode-extjs-info)|[Visual Studio Marketplace](https://marketplace.visualstudio.com/itemdetails?itemName=spmeesseman.vscode-extjs)|
 |vscode-taskexplorer|VSCode Tasks Management|[GitHub](https://github.com/spmeesseman/vscode-taskexplorer)|[Visual Studio Marketplace](https://marketplace.visualstudio.com/itemdetails?itemName=spmeesseman.vscode-taskexplorer)|
 |vscode-vslauncher|VSCode VS Project Launcher|[GitHub](https://github.com/spmeesseman/vscode-vslauncher)|[Visual Studio Marketplace](https://marketplace.visualstudio.com/itemdetails?itemName=spmeesseman.vscode-vslauncher)|
