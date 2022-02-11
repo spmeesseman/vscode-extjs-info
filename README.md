@@ -6,8 +6,8 @@
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs&ssr=false#review-details)
 [![PayPalDonate](https://img.shields.io/badge/paypal-donate-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YWZXT3KE2L4BA&item_name=extjs&currency_code=USD)
 
-[![codecov](https://codecov.io/gh/spmeesseman/vscode-extjs/branch/master/graph/badge.svg)](https://codecov.io/gh/spmeesseman/vscode-extjs)
-[![CodeFactor](https://www.codefactor.io/repository/github/spmeesseman/vscode-extjs/badge)](https://www.codefactor.io/repository/github/spmeesseman/vscode-extjs)
+[![codecov](https://codecov.io/gh/spmeesseman/vscode-extjs/branch/master/graph/badge.svg?token=44I5LRLQ8H)](https://codecov.io/gh/spmeesseman/vscode-extjs)
+[![CodeFactor](https://www.codefactor.io/repository/github/spmeesseman/vscode-extjs/badge?s=e903aac358db545eaccaec3b4976631e9f784826)](https://www.codefactor.io/repository/github/spmeesseman/vscode-extjs)
 [![app-publisher](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-app--publisher-e10000.svg)](https://github.com/spmeesseman/app-publisher)
 
 [![GitHub issues open](https://img.shields.io/github/issues-raw/spmeesseman/vscode%2dextjs%2dinfo.svg?logo=github)](https://github.com/spmeesseman/vscode-extjs-info/issues)

@@ -1,0 +1,22 @@
+{
+    "projectName":              "vscode-extjs-info",
+    "branch":                   "master",
+    "buildCommand":             "",
+    "buildPostCommand":         [],
+    "changelogFile":            "CHANGELOG.md",
+    "changelogNoTouch":         true,
+    "deployPostCommand":        [],
+    "githubAssets": [
+        "CHANGELOG.md|Changelog File",
+        "release/vscode-extjs-$(VERSION).vsix|VSIX Installer"
+    ],
+    "githubRelease":            "Y",
+    "githubReleasePostCommand": "npx rimraf *.vsix",
+    "githubUser":               "spmeesseman",
+    "promptVersion":            "Y",
+    "repo":                     "https://github.com/spmeesseman/vscode-extjs-info.git",
+    "repoType":                 "git",
+    "skipChangelogEdits":       "N",
+    "skipVersionEdits":         "Y",
+    "vcWebPath":                "https://github.com/spmeesseman/vscode-extjs-info"
+}
