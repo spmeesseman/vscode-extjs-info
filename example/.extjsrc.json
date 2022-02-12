@@ -1,4 +1,9 @@
 {
-    "classpath": "",
-    "name": "VSCodeExtJS"
+    "name": "VSCodeExtJS",
+    "classpath": [
+        "app/classic/src", "app/modern/src", "app/shared/src"
+    ],
+    "overrides": [
+        "app/classic/overrides", "app/modern/overrides", "app/shared/overrides"
+    ]
 }
