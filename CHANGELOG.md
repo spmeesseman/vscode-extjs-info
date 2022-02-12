@@ -1,38 +1,5 @@
 # VSCODE-EXTJS CHANGE LOG
 
-## Version 1.3.0 (February 10th, 2022)
-
-### Bug Fixes
-
-- **Completion:** xtypes and types completion leaves trailing quote when commit char is entered while typing within the value quotes.
-- **Ast Parser:** fails to parse the main Ext object, causing several providers to not show most of the Ext namespace properties and methods.
-- **Validation:** when validating requires for a class file, the indexer can fail to consider the files required in 'Ext.app.Application'.
-
-### Documentation
-
-- **Readme:** add some screenshots to completion section
-- **Readme:** update tips section
-
-### Features
-
-- **Completion:** add support for model field and value completion in Ext.create
-- **Completion:** add value only completion for model fields
-- **Completion:** for model fields, auto enter date format in in value completion if 'dateFormat' is specified in the field definition
-- **Jsdoc:** add new doc tag @field for model fields to be used by all intellisense providers
-- **Completion:** add jsdoc to xtype/type completion
-- **Completion:** add support for value completion of properties and configs within an object.
-- **Completion:** add component completion in string literal for create()
-- **Completion:** add xtype completion in string literal for up/down/next/prev
-- **Completion:** add support for completion on param types and links in jsdoc comments
-
-### Refactoring
-
-- **Indexer:** when an update forces a re-index, display an informational message
-
-### Visuals
-
-- **Code Actions:** fix requires wrray for static create should uses word classes not xtypes
-
 ## Version 1.2.2 (February 7th, 2022)
 
 ### Bug Fixes
