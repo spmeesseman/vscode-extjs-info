@@ -7,6 +7,7 @@
     "changelogFile":            "CHANGELOG.md",
     "changelogNoTouch":         true,
     "deployPostCommand":        [
+        "git add -- release/vscode-extjs-$(VERSION).vsix",
         "git commit -m \"chore: v$(VERSION)\" release/vscode-extjs-$(VERSION).vsix CHANGELOG.md",
         "git push origin main:main"
     ],
