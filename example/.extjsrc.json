@@ -1,5 +1,6 @@
 {
-    "name": "VSCodeExtJS",
+    "name": "ExtJsProjectName",
+    "framework": "c:\\Sencha\\extjs\\ext-7.2.0",
     "classpath": [
         "app/classic/src", "app/modern/src", "app/shared/src"
     ],
