@@ -1,5 +1,19 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.3.1 (February 12th, 2022)
+
+### Bug Fixes
+
+- **Jsdoc Parser:** incorrectly parses array types in params
+
+### Documentation
+
+- **Readme:** update badges with tokens
+
+### Build System
+
+- **Publishrc:** add launch of public repo publish run
+
 ## Version 1.3.0 (February 10th, 2022)
 
 ### Bug Fixes
