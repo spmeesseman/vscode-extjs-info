@@ -1,5 +1,21 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.4.0 (February 14th, 2022)
+
+### Bug Fixes
+
+- **Jsdoc:** parser does not convert some codeblocks
+
+### Features
+
+- **General:** support global static variable collection and parsing on the main Ext.app.Application object for all providers
+
+### Build System
+
+- **Webpack:** move build system to webpack v5.68.0 and update all webpack dependencies to support NodeJS 17 environment
+- **Ap:** adjust publishrc for new script sanitization
+- **Npm:** audit 14 dev dependency security vulnerabilities
+
 ## Version 1.3.1 (February 12th, 2022)
 
 ### Bug Fixes
