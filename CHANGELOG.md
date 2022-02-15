@@ -1,5 +1,15 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.5.0 (February 14th, 2022)
+
+### Performance Enhancements
+
+- cache configurations, decreases startup time for large workspaces
+
+### Visuals
+
+- **Completion:** remove detail from label and use vscode completion detail display
+
 ## Version 1.4.0 (February 14th, 2022)
 
 ### Bug Fixes
