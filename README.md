@@ -283,7 +283,7 @@ TODO
 |Screenshots||
 |-|-|
 |![completion-img1](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/completion-model-field-value.png)|![completion-img2](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/completion-model-fields.png)|
-|![completion-img3](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/v/res/readme/completion-store-type.png)||
+|![completion-img3](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/completion-store-type.png)||
 
 ![completion-img4](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/completion-model-fields-doc.png)
 
