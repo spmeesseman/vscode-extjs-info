@@ -1,5 +1,13 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.6.1 (February 27th, 2022)
+
+### Bug Fixes
+
+- **Indexer:** progress indicator starts at -1 in multi-root workspaces, bounces back and forth +/-2% when in caching stage.
+- **Commands:** clear ast command does not clear config file cache.
+- **Config Parser:** parser is searching through node_modules folder when looking for .extjsrc.json configuration files, causing UI slowdown / temporary locking up, if user has removed node_modules from default exclude setting, then saerching for app.json files results in the same.
+
 ## Version 1.6.0 (February 27th, 2022)
 
 ### Bug Fixes
