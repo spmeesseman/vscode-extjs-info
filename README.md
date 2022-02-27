@@ -282,10 +282,10 @@ TODO
 
 |Screenshots||
 |-|-|
-|![completion-img1](res/readme/completion-model-field-value.png)|![completion-img2](res/readme/completion-model-fields.png)|
-|![completion-img3](res/readme/completion-store-type.png)||
+|![completion-img1](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/completion-model-field-value.png)|![completion-img2](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/completion-model-fields.png)|
+|![completion-img3](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/v/res/readme/completion-store-type.png)||
 
-![completion-img4](res/readme/completion-model-fields-doc.png)
+![completion-img4](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/completion-model-fields-doc.png)
 
 ## GoTo Definitions
 
@@ -332,7 +332,7 @@ The variables `${classname]` and `{classname}` in this example will be replaced 
 
 For debugging or curiosity, a report can be generated listing all parsed components and the properties found.  You can generate a report in the explorer context menus using the `ExtJs: View Parsing Report` menu item.
 
-![ast-report-img](resources/readme/../../res/readme/ast-report.png)
+![ast-report-img](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/ast-report.png)
 
 ## ESLint Tips
 
