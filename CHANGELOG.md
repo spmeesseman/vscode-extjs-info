@@ -1,5 +1,33 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.6.0 (February 27th, 2022)
+
+### Bug Fixes
+
+- **Hover:** jsdoc does not show when hovering over a static function definition
+- **General:** component search used by providers can find the wrong component if there are two components with the same alias name, but different namespace, e.g. model.form, widget.form, and layout.form.
+- **Config Parser:** a blank config with all dirs set to '*' is created for every project.  Seemingly harmless.
+- **Completion:** triggering in non-extjs calls like console.log inside of string params.
+- **Logging:** correct log blank line functionality
+
+### Documentation
+
+- **Readme:** fix screenshots not showing
+
+### Performance Enhancements
+
+- optimize component scanning for all providers for multi-project workspaces.
+- optimize the on-demand scanning of parsed components for all providers.
+- optimize validation.
+
+### Refactoring
+
+- **Hover:** populate param names for params in title if there is no jsdoc.
+
+### Visuals
+
+- improve accuracy of progress indicator
+
 ## Version 1.5.0 (February 14th, 2022)
 
 ### Performance Enhancements

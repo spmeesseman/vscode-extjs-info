@@ -192,9 +192,9 @@ Aside from that, the ExtJs Language Server provides everything else it is capabl
 
 |Screenshots||
 |-|-|
-|![hover-img1](resources/readme/../../res/readme/hover-xtype.png)|![hover-img2](resources/readme/../../res/readme/hover-cls-instance.png)|
-|![hover-img3](resources/readme/../../res/readme/hover-extjs-textfield.png)|![hover-img4](resources/readme/../../res/readme/hover-extjs-ajax.png)|
-|![hover-img5](resources/readme/../../res/readme/hover-singleton.png)||
+|![hover-img1](res/readme/hover-xtype.png)|![hover-img2](res/readme/hover-cls-instance.png)|
+|![hover-img3](res/readme/hover-extjs-textfield.png)|![hover-img4](res/readme/hover-extjs-ajax.png)|
+|![hover-img5](res/readme/hover-singleton.png)||
 
 JsDoc comments are most useful to a JavaScript programmer but useless to an ExtJs programmer.  Not anymore... They are parsed and used where applicable just like a standard JavaScript Language Server:
 
@@ -282,10 +282,10 @@ TODO
 
 |Screenshots||
 |-|-|
-|![completion-img1](resources/readme/../../res/readme/completion-model-field-value.png)|![completion-img2](resources/readme/../../res/readme/completion-model-fields.png)|
-|![completion-img3](resources/readme/../../res/readme/completion-store-type.png)||
+|![completion-img1](res/readme/completion-model-field-value.png)|![completion-img2](res/readme/completion-model-fields.png)|
+|![completion-img3](res/readme/completion-store-type.png)||
 
-![completion-img4](resources/readme/../../res/readme/completion-model-fields-doc.png)
+![completion-img4](res/readme/completion-model-fields-doc.png)
 
 ## GoTo Definitions
 
