@@ -1,5 +1,21 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.0 (March 1st, 2022)
+
+### Bug Fixes
+
+- **Ast Parser:** location on some component ranges is inaccurate.
+- **Indexer:** directories that are excluded are not being used by providers but are still being indexed.
+- **General:** when there are components that have the same alias name and are within the same workspace folder but different root app.json paths (multipl ExtJs projects), component query can return incorrect component info to all calling providers.
+
+### Documentation
+
+- **Readme:** update screenshots to use public repo paths
+
+### Features
+
+- **Completion:** add support for in-method instance variables created with Ext.create or static create.
+
 ## Version 1.6.1 (February 27th, 2022)
 
 ### Bug Fixes
