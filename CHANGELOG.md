@@ -1,5 +1,11 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.1 (March 3rd, 2022)
+
+### Bug Fixes
+
+- **General:** when there are components that have the same alias name and are within the same workspace folder but different root app.json paths (multipl ExtJs projects), component query can still return incorrect component info to all calling providers.
+
 ## Version 1.7.0 (March 1st, 2022)
 
 ### Bug Fixes
