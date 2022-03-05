@@ -1,14 +1,14 @@
 {
     "projectName":              "vscode-extjs-info",
-    "projectVersion":           "1.7.1",
+    "projectVersion":           "1.7.2",
     "branch":                   "main",
     "buildCommand":             "",
     "buildPostCommand":         [],
     "changelogFile":            "CHANGELOG.md",
     "changelogNoTouch":         true,
     "deployPostCommand":        [
-        "git add -- release/vscode-extjs-$(VERSION).vsix CHANGELOG.md README.md .todo res/**/*.*",
-        "git commit -m \"chore: v$(VERSION)\" release/vscode-extjs-$(VERSION).vsix CHANGELOG.md README.md .todo res/**/*.*",
+        "git add -- release/vscode-extjs-$(VERSION).vsix CHANGELOG.md README.md .todo \"res/**/*.*\"",
+        "git commit -m \"chore: v$(VERSION)\" release/vscode-extjs-$(VERSION).vsix CHANGELOG.md README.md .todo \"res/**/*.*\"",
         "git push origin main:main"
     ],
     "githubAssets": [
