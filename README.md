@@ -278,7 +278,7 @@ If you generate your own docs using Sencha Cmd, you can add that too:
 
 ## Code Completion
 
-TODO
+TODO - Write Code Completion readme section
 
 |Screenshots||
 |-|-|
@@ -289,19 +289,24 @@ TODO
 
 ## GoTo Definitions
 
-TODO
+TODO - Write GoTo Definitions readme section
 
 ## GoTo Type Definitions
 
-TODO
+TODO - Write GoTo Type Definitions readme section
 
 ## Method Signatures
 
-TODO
+TODO - Write Method Signatures readme section
 
 ## Diagnostics
 
-TODO
+TODO - Write Diagnostics readme section
+
+|Screenshots||
+|-|-|
+|![diag-img1](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/diagnostics-msg.png)|![diag-img2](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/diagnostics-fix.png)|
+|![diag-img3](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/diagnostics-msg2.png)|![diag-img4](https://raw.githubusercontent.com/spmeesseman/vscode-extjs-info/main/res/readme/diagnostics-fix2.png)|
 
 ## Task Provider
 

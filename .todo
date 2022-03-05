@@ -3,6 +3,8 @@ AST Parser:
 
 	✔ Store property 'type' and mappings @done(21-08-21 09:22)
 	☐ Additional properties needed for models
+	☐ duplicate classes shouldn't 'overwrite' the other.
+		Copied a random Utils class and it overwrote server/csi/Utils!!
 
 Completion:
 
@@ -46,7 +48,7 @@ Completion:
 	✔ Statics on main app inline. @done(21-09-06 15:51)
 		i.e. GEMS.user.  'user' properties do not have completion
 		Scan for GEMS.user= in alll files?  Or create static file mapping to types (like eslint globals)
-	☐ Main app inline
+	✔ Main app inline @done(22-02-06 19:23)
 		i.e. GEMS.model, GEMS.store, 'model', 'store' completion does not show any items
 	✔ Highlight a word in a comment, type x, and the xtype completion items appear. @done(21-09-04 13:19)
 		behind comments no completion should happen
@@ -64,6 +66,8 @@ Completion:
 		e.g. const asrButton = view.up('app-main').down('asrbutton');
 		typing asrButton. shows nothing
 	☐ Private methods and properties should show in the file that defines them even if 'show private' setting is off
+	✔ Getting completion items for string in console.log('....') @done(22-02-16 20:22)
+		only classes and class members should have string completion
 
 Definition:
 
@@ -134,6 +138,8 @@ Diagnostics:
             role: 'department',
             unique: true
         }
+	☐ Class not found (red) but is being suggested in suggesstions list, so it'sthere
+		server proj, Utils.cs, Ext.ux.WebWorker
 
 JsDoc:
 
