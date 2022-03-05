@@ -1,5 +1,40 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.2 (March 5th, 2022)
+
+### Bug Fixes
+
+- **Config Parser:** packages not in @sencha scope but is 'Ext' namespace are not parsed for any projects other than the first one that references that package name.
+- **Indexer:** progress indicator jumps around a few percent between each project when in caching stage
+- **General:** if vscode is launched with --user-data-dir argument, caching does not work
+- **Code Actions:** using the quick fix 'ignore for this line' does not work for requires classes
+- **Validation:** the wrong component that extends Ext.app.Application can be found if more than one app.json exists in a workspace folder when validating required files
+- **Validation:** the 'ignore error' command for 'this line only' sometimes does not insert the ignore comment in line and above the keyword to be ignored.
+- **Validation:** there are occasional invalidations made where the require does exist in an extended component.
+- **Completion:** some base inline items are showing incorrect jsdoc of random sub-component.
+- **Signature:** does not work for methods that are extended on to the base class, by either 'extend' or 'mixins'.
+- **Completion:** extended properties and functions are not listed when the base component is a singleton
+- **Signature:** not working for most methods found in components defined in framework or external packages
+- **Signature:** when jsdoc is shown for a parameter, the doc for all parameters following the current one is shown as well, only the doc for the current param should be shown.
+- **Signature:** signature does not work when parameters cover multiple lines
+- **Definition:** if a workspace folder contains more than one project / app.json file, the 'goto definition' action does not work for controller aliases.
+- **Definition:** if a workspace folder contains more than one project / app.json file, the 'goto definition' actions can still open the wrong file / location for components with a matching alias name between the two projects.
+- **Signature:** no inline signature completion is provided for methods defined in framework and package components outside the base project namespace
+
+### Documentation
+
+- **Readme:** complete some section todos, readme ~75% done
+- **Readme:** add screenshots to diagnostics section
+
+### Performance Enhancements
+
+- **Validation:** reduce # of components examined when performing ensureRequire command
+
+### Refactoring
+
+- **Config Parser:** dont parse 'theme' type packages.
+- **Jsdoc:** change default extjs doc page used in links to 7.5.0
+
 ## Version 1.7.1 (March 3rd, 2022)
 
 ### Bug Fixes

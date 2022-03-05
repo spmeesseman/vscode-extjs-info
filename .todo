@@ -3,7 +3,7 @@ AST Parser:
 
 	✔ Store property 'type' and mappings @done(21-08-21 09:22)
 	☐ Additional properties needed for models
-	☐ duplicate classes shouldn't 'overwrite' the other.
+	✔ duplicate classes shouldn't 'overwrite' the other. @done(22-03-05 02:29)
 		Copied a random Utils class and it overwrote server/csi/Utils!!
 
 Completion:
@@ -12,12 +12,12 @@ Completion:
 	✔ xtype selection is double printing xtype if already typed in and into the string part @done(21-08-15 19:17)
 	✔ Add mixin config to syntax tree parsing @done(21-08-13 14:35)
 		Process as an extended class for properties/configs/methods
-	☐ When writing method parameters, and they are line broken (i.e. object param), method signature breaks
+	✔ When writing method parameters, and they are line broken (i.e. object param), method signature breaks @done(22-03-04 20:04)
 	✔ Inline does not work when preceded by 'await ' (or probably any other word) @done(21-08-13 17:08)
 	✔ Main namespace inline does not work.  e.g. 'Ext', or 'VSCodeExtJS', 'GEMS' @done(21-08-17 23:44)
 	✔ For instance properties, the 'go to definition' should go to the declaration, not the definition @done(21-08-21 08:55)
 		the 'go to type definition' works as intended and goes to the definition
-	☐ The 'this' property needs to check for function scope, currently 'this' is always the main cmp instance
+	☐ The 'this' property needs to check for function scope, currently 'this' is always the main cmp instance @started(22-03-04 20:58)
 	✔ dot completion - doesnt work if there are characters to the right @done(21-08-21 08:53)
 		e.g.: app.js line 85, remove some of 'PhysicianDropdown' and try typing it in again
 		it will only work if the typing is coming left to right and there are no chars to the right
@@ -42,7 +42,7 @@ Completion:
 	☐ Model property getter/setter when using associations
 	☐ Component store property string literal completion, like xtype/type
 	☐ Store model property string literal completion, like xtype/type
-	☐ Apply defaults for 'items'
+	☐ Apply 'defaults' object for 'items'
 		look for xtype and apply same logic as if it was in item object itself
 	☐ Grid columns, column config
 	✔ Statics on main app inline. @done(21-09-06 15:51)
@@ -52,7 +52,7 @@ Completion:
 		i.e. GEMS.model, GEMS.store, 'model', 'store' completion does not show any items
 	✔ Highlight a word in a comment, type x, and the xtype completion items appear. @done(21-09-04 13:19)
 		behind comments no completion should happen
-	☐ Ext.Ajax.* does not work
+	✔ Ext.Ajax.* does not work @done(22-03-04 20:58)
 		Probably more singletons likes this don't work too
 		Ajax is in completion list after Ext., but nothing with Ext.Ajax.
 	✔ after = inline class doesnt work @done(21-09-12 20:56)
@@ -83,7 +83,7 @@ Diagnostics:
 
 	☐ dot notation.  pretty much same validation as for requires[] but diff in code blocks (warning vs. error)
 	✔ 'uses' property.  same validation as for requires[] @done(21-08-15 18:46)
-	☐ packages not @sencha should have xtype validation.  currently not validated if namespace name begins w Ext
+	✔ packages not @sencha should have xtype validation.  currently not validated if namespace name begins w Ext @done(22-03-03 23:06)
 	☐ (warning) for deprecated property/config/method/class use
 		configuration setting - on/off
 	✔ Requires - marks onvalid when a class reference is to an alternateClassName @done(21-08-13 15:33)
@@ -124,7 +124,7 @@ Diagnostics:
 	✔ 'types' that include a dash character are invalidated e.g. { type: 'calendar-events' } @done(22-01-16 18:51)
 	✔ Store viewmodel type is invalidated @done(22-01-20 23:01)
 		{ stores: { departments: { type: 'departments' } } }
-	☐ inline creates() invalidates doesnt take into account alias class name
+	✔ inline creates() invalidates doesnt take into account alias class name @done(22-03-04 20:08)
 		Ext.create('GEMS.model.user.UserPoolXRef') gets invalidated even with proper require
 	✔ Suggesions 'add to require' doesnt work for inline create() warnings @done(22-01-27 13:38)
 	☐ Add settings to turn different error type validations into warning/error (yellow/red0)
@@ -138,7 +138,7 @@ Diagnostics:
             role: 'department',
             unique: true
         }
-	☐ Class not found (red) but is being suggested in suggesstions list, so it'sthere
+	✔ Class not found (red) but is being suggested in suggesstions list, so it'sthere @done(22-03-04 20:09)
 		server proj, Utils.cs, Ext.ux.WebWorker
 
 JsDoc:
@@ -167,12 +167,14 @@ JsDoc:
 
 Miscellaneous:
 
-	☐ Server module nyc instrumentation
-	☐ Server cannot break on common module code (ts) while debugging
+	✔ Server module nyc instrumentation @done(22-03-04 20:09)
+	☐ Server cannot break on common module code (ts) while debugging, ???
 	Move as much functionality to server side as possible:
 		✔ JsDoc parser @done(21-08-29 11:52)
 		☐ Hover?
+		☐ Config parser?
 		☐ Completion?
+		☐ Code actions?
 		need to step into js code from calling ts server code
 	✔ Fault tolerance in AST parser @done(21-08-28 13:26)
 	✔ add 'clear ast cache' or 'reindex' task for chance becomes corrupt @done(21-08-08 14:15)
@@ -199,18 +201,19 @@ Miscellaneous:
 	✔ Renamed/moved file doesnt get cached.  validates, but no hover, completion, etc @done(21-08-28 10:24)
 	✔ if a doc is edited, closed w/o saving, mem cache needs to be reset @high @done(22-01-27 22:43)
 		fs cache will hold previous value still, since no persist until save
-	☐ Review namespace usage
+	✔ Review namespace usage @done(22-03-04 20:10)
 		is it correct to use 'name' property from app.json
 		namespace property in package.json files sencha cfg
 		namespace property in sass ad other app.json cfg objects
-	☐ Support post Cmd6.7+ projects with npm installed ext-core
+	✔ Support post Cmd6.7+ projects with npm installed ext-core @done(22-03-04 20:11)
 	☐ Cmd project package.json
 		subfolders property, refernces to all cmd packages
-	☐ Manual instance mapping
+	✔ Manual instance mapping @done(22-03-04 20:11)
 		e.g. configuration setting to treat all instances of App.facility as App.model.facility.Facility
 	✔ 'fix requires' ifno requires array exists @done(22-01-27 17:25)
 		it is created correctly, but is tabbed over twoce instead of once
-	☐ COnfigurable user type.  i.e. can define 'leftStore' to be trated like type 'store'.
+	☐ Configurable type equivalents.
+		i.e. can define 'leftStore' to be trated like type 'store'.
 		leftStore: { type: 'chained', ... }
 	✔ Renaming file cause 'duplicate reference' warning @done(22-01-16 18:51)
 

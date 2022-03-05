@@ -24,6 +24,7 @@ This extension has surpassed where I was going to take it.  Considering a pay sc
 - [ExtJs Intellisense - Code Completion, and More](#extjs-intellisense---code-completion-and-more)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
+  - [Compared to Sencha Extension](#compared-to-sencha-extension)
   - [File Indexing](#file-indexing)
   - [Configuration](#configuration)
     - [Configuration - The `app.json` ExtJs Project File](#configuration---the-appjson-extjs-project-file)
@@ -33,8 +34,7 @@ This extension has surpassed where I was going to take it.  Considering a pay sc
     - [Configuration - The `exclude` Property](#configuration---the-exclude-property)
     - [Configuration - The `include` Property](#configuration---the-include-property)
     - [Configuration - The `framework` Property](#configuration---the-framework-property)
-    - [Configuration - VSCode Quick Suggestions](#configuration---vscode-quick-suggestions)
-  - [Compared to Sencha Extension](#compared-to-sencha-extension)
+    - [Configuration - Completion](#configuration---completion)
   - [JsDoc](#jsdoc)
     - [JsDoc - Links](#jsdoc---links)
   - [Code Completion](#code-completion)
@@ -65,14 +65,47 @@ ExtJs Intellisense is a VSCode Language Server that provides most Intellisense a
 - Code Completion Intellisense with Inline JSDoc/Comments
 - Method Signature Intellisense with Inline JSDoc/Comments
 - Method Parameter Validation
-- XType Validation and Completion (Credits to Original Author **qzsiniong**)
+- XType Validation and Completion
 - Method and Class Validation
+ 
+## Compared to Sencha Extension
 
-See the section [Compared to Sencha Extension](#compared-to-sencha-extension) for a detailed feature list.
+This extension is unable to perform the app/workspace commands using Sencha Cmd that the Sencha extension provides.
+
+Aside from that, the ExtJs Language Server provides everything else it is capable of and more:
+
+1. Free :) (for now)
+2. Intellisense and Code Completion for class members and local controller variables created with Ext.create.
+3. Go To Definition for classes and class string literals.
+4. Static configuration file for specifying project name and classpaths to parse.
+5. Support for multi-Root workspaces.
+6. Support for multiple app.json projects per-workspace-folder.
+7. Intellisense with Full JSDoc and configurable online doc links.
+8. Method Signature / inline parameter helper with JsDoc.
+9. Hover JsDoc for all classes, methods, properties, configs, xtypes and class string literals.
+10. Static vs. Instance Intellisense.
+11. Go To Type Definition for variables and xtypes.
+12. XType validation.
+13. Store and model type validation.
+14. Requires, uses, models, stores Arrays validation.
+15. Ext.create() and static model/store create() validation.
+16. Diagnostic *Quick Fix* for invalidated types and xtypes.
+17. Basic value completion for primitives and value formatting for `dateFormat` model field property.
+18. Parses [app.json](#the-appjson-extjs-project-file), *workspace.json*, and *package.json* files for auto-import of classpaths, including dependencies.
+19. Parses custom [.extjsrc.json](#the-extjsrcjson-configuration-file) files for projects that do not use [app.json](#the-appjson-extjs-project-file) / *workspace.json*.
+20. Turn on/off the inclusion of deprecated class members into Intellisense directly in VSCode Settings.
+21. Turn on/off the inclusion of private class members into Intellisense directly in VSCode Settings.
+22. Configure specific classpaths for Indexing directly in VSCode Settings.
+23. Basic method parameter jsdoc even if no jsdoc present for method pr parameter.
+24. Parses ES2016+ syntax using occassionally updated Babel parser and AST traversal.
+25. Configurable validation timeout useful for slower systems.
+26. Instantly [generate class files](#the-create-new-class-command) from Explorer context menu, from template or a copied class with dynamic class renaming.
+27. Generate [parsing reports](#ast-parsing-reports).
+28. Caching for increased performance once initial indexing has been done.
 
 ## File Indexing
 
-The first time the extension loads, it will index all ExtJs files found within the VSCode workspace, as specified by the Sencha project files (i.e. app.json and workspace.json) or the extension's configuration.  *First time indexing* may take several minutes depending on the size of your workspace, the # of ExtJs projects in the workspace, and the size of the ExtJs projects.  Once indexed though, cached indexing will be less than 10% the time it takes to perform the full indexing when opening the VSCode workspace.
+The first time the extension loads, it will index all ExtJs files found within the VSCode workspace, as specified by the Sencha project files (i.e. app.json and workspace.json), the custom .extjsrc.json files, or the extension's configuration.  *First time indexing* may take several minutes depending on the size of your workspace, the # of ExtJs projects in the workspace, and the size of the ExtJs projects.  Once indexed though, cached indexing will be 5x faster than the full indexing when opening the VSCode workspace.
 
 ## Configuration
 
@@ -136,11 +169,11 @@ The `NAME` part represents the `name` field [described below](#configuration---t
 
 ### Configuration - The `framework` Property
 
-The **framework** path can be set to a string representing the path to an ExtJs framework to use for validation.
+The **framework** path can be set to a string representing the path to an ExtJs framework to use by all providers.
 
-### Configuration - VSCode Quick Suggestions
+### Configuration - Completion
 
-In order for *inline* completion to work correctly, ensure the VSCode editor setting `quickSuggestions` is enabled.  An appropriate setting could be:
+In order for *inline* completion to work correctly (i.e. the first keyword in the dot notation), ensure the VSCode editor setting `quickSuggestions` is enabled.  An appropriate setting could be:
 
     "editor.quickSuggestions": {
         "other": true,
@@ -152,41 +185,11 @@ Or:
 
    "editor.quickSuggestions": true
 
-Other recommended settings for ExtJs Intellisense that may affect other language servers are:
+Other recommended settings for ExtJs Completion Intellisense that may affect other language servers are:
 
     "editor.suggestSelection": "first",
     "editor.wordBasedSuggestions": false,
     "javascript.suggest.names": false,
- 
-## Compared to Sencha Extension
-
-This extension is unable to perform the app/workspace commands using Sencha Cmd that the Sencha extension provides.
-
-Aside from that, the ExtJs Language Server provides everything else it is capable of and more:
-
-1. Free :)
-2. Intellisense and Code Completion for class members and local controller variables created with Ext.create.
-3. Go To Definition for classes and class string literals.
-4. Static configuration file for specifying project name and classpaths to parse.
-5. Multi-Root Workspace Support.
-6. Intellisense with Full JSDoc.
-7. Method Signature / inline parameter helper with JsDoc.
-8. Hover JsDoc for all classes, methods, properties, configs, xtypes and class string literals.
-9. Static vs. Instance Intellisense.
-10. Go To Type Definition for variables and xtypes.
-11. XType validation.
-12. Store and model type validation.
-13. Requires, uses, models, stores Arrays validation.
-14. Ext.create() and static model/store create() validation.
-15. Diagnostic *Quick Fix* for invalidated types and xtypes.
-16. Parses [app.json](#the-appjson-extjs-project-file), *workspace.json*, and *package.json* files for auto-import of classpaths, including dependencies.
-17. Turn on/off the inclusion of deprecated class members into Intellisense directly in VSCode Settings.
-18. Turn on/off the inclusion of private class members into Intellisense directly in VSCode Settings.
-19. Configure specific classpaths for Indexing directly in VSCode Settings.
-20. @since, @deprecated, and @private JsDoc tags and Intellisense tags.
-21. Parsing performance is slightly slower the first time the extension loads, but subsequent usage sees parsing performance @ ~ 1.4-1.5x faster.
-22. Parses ES2016+ syntax using latest Babel code parser and AST traversal.
-23. Configurable validation timeout useful for slower systems.
 
 ## JsDoc
 
@@ -265,20 +268,32 @@ Examples:
 You can specify the base documentation site of the "See ..." links per namespace.  The default is:
 
     docURL: {
-        "Ext": "https://docs.sencha.com/extjs/7.4.0"
+        "Ext": "https://docs.sencha.com/extjs/7.5.0"
     }
 
-If you generate your own docs using Sencha Cmd, you can add that too:
+If you generate your own project docs using Sencha Cmd, you can add that too:
 
     docURL: {
-        "Ext": "https://docs.sencha.com/extjs/7.4.0",
+        "Ext": "https://docs.sencha.com/extjs/7.5.0",
         "MyProjectName": "https://my.website.com/projectname/docs",
         "MyCompanyName.ux": "https://my.website.com/companyname/projectname/docs"
     }
 
+Where the object property is the ExtJs `name` property specified in *app.json* or *.extjsrc.json*.
+
 ## Code Completion
 
-TODO - Write Code Completion readme section
+Completion intellisense for project, package, and framework components.  The following types of completion are currently supported:
+
+- Inline object
+- Xtype properties
+- Type properties
+- Model properties
+- Store properties
+- Value completion for primitives
+- Value date formats for model fields that define the `dateFormat` property
+
+Note that completion (or any of the other providers) is not active for documents in the active editor that are not part of the base project, i.e. if you edit a framework or an external package file, completion is not available.  Genrally package files and framework files are not edited, but overridden.
 
 |Screenshots||
 |-|-|
@@ -289,19 +304,29 @@ TODO - Write Code Completion readme section
 
 ## GoTo Definitions
 
-TODO - Write GoTo Definitions readme section
+*My favorite feature.*
+
+Instantly jump to the definition of any component class, property, config or method.
+
+TODO - Add screenshot
 
 ## GoTo Type Definitions
 
-TODO - Write GoTo Type Definitions readme section
+Instantly jump to the type definition of any component class instance.
+
+TODO - Add screenshot
 
 ## Method Signatures
 
+*My 2nd favorite feature.*
+
 TODO - Write Method Signatures readme section
+
+TODO - Add screenshots
 
 ## Diagnostics
 
-TODO - Write Diagnostics readme section
+Diagnostics are performed on an ExtJs component class document in the active editor, marking any problems found with yellow (warning type) or red (error type) squiggly underlines.  You can use the `Quick Fix` links when hovering over thw invalidated keyword to auto-apply any fixes available or ignore the problem (either by line, file, or globally).  Hovering over the invaliated keyword also provides some info and/or suggestions on the problem.
 
 |Screenshots||
 |-|-|
@@ -310,7 +335,7 @@ TODO - Write Diagnostics readme section
 
 ## Task Provider
 
-Provides build tasks for Sencha Cmd and Webpack configured projects.
+Provides build-all and build-profile build tasks for Sencha Cmd and Webpack configured projects.
 
 ![te-img](https://raw.githubusercontent.com/spmeesseman/vscode-taskexplorer/master/res/gears-r-colors.png)
 
