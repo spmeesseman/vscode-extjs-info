@@ -1,5 +1,11 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.3 (March 6th, 2022)
+
+### Bug Fixes
+
+- **Hover:** properties or variables that have the same name as a component alias are showing jsdoc for the alias.
+
 ## Version 1.7.2 (March 5th, 2022)
 
 ### Bug Fixes
