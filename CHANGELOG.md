@@ -1,5 +1,12 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.4 (March 8th, 2022)
+
+### Bug Fixes
+
+- **Hover:** no hover doc is displayed for static creates as a function parameter.
+- **Config Parser:** regression - all theme packages are being parsed
+
 ## Version 1.7.3 (March 6th, 2022)
 
 ### Bug Fixes
