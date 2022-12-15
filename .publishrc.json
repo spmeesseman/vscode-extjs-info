@@ -1,6 +1,6 @@
 {
     "projectName":              "vscode-extjs-info",
-    "projectVersion":           "1.7.4",
+    "projectVersion":           "1.7.5",
     "branch":                   "main",
     "buildCommand":             "",
     "buildPostCommand":         [],
