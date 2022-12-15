@@ -140,6 +140,8 @@ Diagnostics:
         }
 	✔ Class not found (red) but is being suggested in suggesstions list, so it'sthere @done(22-03-04 20:09)
 		server proj, Utils.cs, Ext.ux.WebWorker
+	☐ Class not parsed
+		Ext.csi.Utilities.js line 18 and line 1843
 
 JsDoc:
 

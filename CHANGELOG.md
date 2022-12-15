@@ -1,5 +1,16 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.5 (December 15th, 2022)
+
+### Bug Fixes
+
+- **Completion:** alternate classname aliases are not displaying in completion until the first dot is entered
+- **Indexer:** manually re-indexing sometimes locks up the extension
+- **Indexer:** invalid object range parsing is throwing off component lookup for xtypes in specific cases
+- **Jsdoc:** method return type is not parsed if the type part is not followed by a space character and/or description
+- **Validation:** somestore definitions get invalidated in the viewModel.stores block.
+- **Validation:** model types used in the reference property are invalidated if the class inthe requires block is an alternateClassName
+
 ## Version 1.7.4 (March 8th, 2022)
 
 ### Bug Fixes
