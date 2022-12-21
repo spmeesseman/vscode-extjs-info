@@ -1,5 +1,11 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.6 (December 21st, 2022)
+
+### Bug Fixes
+
+- all providers for projects configured with an .extjsrc file are not working for any of the parsed 'Ext' components in the 'framework' directory.
+
 ## Version 1.7.5 (December 15th, 2022)
 
 ### Bug Fixes
