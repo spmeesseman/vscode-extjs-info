@@ -42,6 +42,7 @@ Completion:
 	☐ Model property getter/setter when using associations
 	☐ Component store property string literal completion, like xtype/type
 	☐ Store model property string literal completion, like xtype/type
+	✔ Not working for extjsrc based projects on the 'framework' directory components @done(22-12-21 10:15)
 	☐ Apply 'defaults' object for 'items'
 		look for xtype and apply same logic as if it was in item object itself
 	☐ Grid columns, column config
@@ -138,6 +139,7 @@ Diagnostics:
             role: 'department',
             unique: true
         }
+	✔ Not working for extjsrc based projects on the 'framework' directory components @done(22-12-21 10:15)
 	✔ Class not found (red) but is being suggested in suggesstions list, so it'sthere @done(22-03-04 20:09)
 		server proj, Utils.cs, Ext.ux.WebWorker
 	☐ Class not parsed
@@ -166,6 +168,7 @@ JsDoc:
 		e.g. const asrButton = view.up('app-main').down('asrbutton');
 		hover over asrButton anywhere in the function shows nothing
 	✔ Multi-type tag does not get parsed, i.e. {Boolean|String}, parameter is missing in doc @done(21-09-21 22:31)
+	✔ Not working for extjsrc based projects on the 'framework' directory components @done(22-12-21 10:15)
 
 Miscellaneous:
 
@@ -238,3 +241,4 @@ Type Definition:
 
 	✔ go to type definition for 'type' same as 'xtype' @done(21-08-21 18:54)
 	☐ Models
+	✔ Not working for extjsrc based projects on the 'framework' directory components @done(22-12-21 10:15)
