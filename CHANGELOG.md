@@ -1,5 +1,11 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.7 (December 21st, 2022)
+
+### Refactoring
+
+- dummy commit to re-run the whole god damn build and test suite because fng microsoft dipshit engineers can't not change something every fng 2 months to break something every fng time I work on this.
+
 ## Version 1.7.6 (December 21st, 2022)
 
 ### Bug Fixes
