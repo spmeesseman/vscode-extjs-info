@@ -1,9 +1,9 @@
 # ExtJs Intellisense - Code Completion, and More
 
 [![authors](https://img.shields.io/badge/authors-scott%20meesseman-6F02B5.svg?logo=visual%20studio%20code)](https://www.littlesm.com)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs)
-[![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs)
-[![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs&ssr=false#review-details)
+[![Installs]( https://img.shields.io/visual-studio-marketplace/i/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs)
+[![Downloads](https://img.shields.io/visual-studio-marketplace/d/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs)
+[![Ratings](https://img.shields.io/visual-studio-marketplace/r/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs&ssr=false#review-details)
 [![PayPalDonate](https://img.shields.io/badge/paypal-donate-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YWZXT3KE2L4BA&item_name=extjs&currency_code=USD)
 
 [![codecov](https://codecov.io/gh/spmeesseman/vscode-extjs/branch/master/graph/badge.svg?token=44I5LRLQ8H)](https://codecov.io/gh/spmeesseman/vscode-extjs)
@@ -49,7 +49,7 @@ This extension has surpassed where I was going to take it.  Considering a pay sc
   - [Caching](#caching)
   - [App-Publisher](#app-publisher)
   - [Thank You](#thank-you)
-  - [Feedback & Contributing](#feedback--contributing)
+  - [Feedback \& Contributing](#feedback--contributing)
     - [Rate It - Leave Some Stars](#rate-it---leave-some-stars)
   - [Donations](#donations)
   - [TODO](#todo)

@@ -1,5 +1,11 @@
 # VSCODE-EXTJS CHANGE LOG
 
+## Version 1.7.9 (December 21st, 2022)
+
+### Bug Fixes
+
+- are you fng kidding me microsoft?  Failing my build because of an SVG I've had in my readme for almost 2 years?  GFY.  So god damn frustrating.
+
 ## Version 1.7.8 (December 21st, 2022)
 
 ### Refactoring
