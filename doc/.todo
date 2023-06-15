@@ -69,6 +69,14 @@ Completion:
 	☐ Private methods and properties should show in the file that defines them even if 'show private' setting is off
 	✔ Getting completion items for string in console.log('....') @done(22-02-16 20:22)
 		only classes and class members should have string completion
+	☐ Does not work in some cases after a '!'
+		e.g. const prod = !Utils.isDevEnv()
+	☐ Namespace parts of classes do not work in some cases
+		e.g. for 'Ext.ux.model.User', completion works for all parts except 'model'
+			 once model. is typed, completion works for 'User'
+	☐ Mixins
+		WHen multiple files are mixed into a class, all mixins should have completion on each included
+		Currently completion works for the mixins only from the class file that mixes them in
 
 Definition:
 
@@ -85,8 +93,14 @@ Diagnostics:
 	☐ dot notation.  pretty much same validation as for requires[] but diff in code blocks (warning vs. error)
 	✔ 'uses' property.  same validation as for requires[] @done(21-08-15 18:46)
 	✔ packages not @sencha should have xtype validation.  currently not validated if namespace name begins w Ext @done(22-03-03 23:06)
-	☐ (warning) for deprecated property/config/method/class use
-		configuration setting - on/off
+	☐ Deprecation validation
+	    (warning) for deprecated property/config/method/class use
+		Should receive warning invalidation
+		Example:
+			Ext.csi.store.Base.timeout
+		If "timeout" is tagged with @deprectaed in the comments, then warning underling
+		Add formatted hover markdown for all methods/properties when deprecated
+			configuration setting - on/off
 	✔ Requires - marks onvalid when a class reference is to an alternateClassName @done(21-08-13 15:33)
 		e.g. App.model.user.User as alternate but namespace sees App.model.User
 	☐ Method parameter validation against types in jsdoc
@@ -130,8 +144,13 @@ Diagnostics:
 	✔ Suggesions 'add to require' doesnt work for inline create() warnings @done(22-01-27 13:38)
 	☐ Add settings to turn different error type validations into warning/error (yellow/red0)
 	✔ 'type' property value for viewModel: { type: '...' } is always invalidated @done(22-02-02 23:37)
-	☐ store types with more than one path level always invalidated
+	✔ store types with more than one path level always invalidated @done(23-04-23 19:33)
 		i.e. store.user.users, referenced by store: { type: 'user.users' } is always invalidated
+	✔ Not working for extjsrc based projects on the 'framework' directory components @done(22-12-21 10:15)
+	✔ Class not found (red) but is being suggested in suggesstions list, so it'sthere @done(22-03-04 20:09)
+		server proj, Utils.cs, Ext.ux.WebWorker
+	☐ Class not parsed
+		Ext.csi.Utilities.js line 18 and line 1843
 	☐ model types in references are invalidated if def is present in Application.js
 		reference
         {
@@ -139,11 +158,22 @@ Diagnostics:
             role: 'department',
             unique: true
         }
-	✔ Not working for extjsrc based projects on the 'framework' directory components @done(22-12-21 10:15)
-	✔ Class not found (red) but is being suggested in suggesstions list, so it'sthere @done(22-03-04 20:09)
-		server proj, Utils.cs, Ext.ux.WebWorker
-	☐ Class not parsed
-		Ext.csi.Utilities.js line 18 and line 1843
+	☐ the 'tools' config type property is invalidated
+		tools: [{
+			type: 'refresh',
+			callback....
+		}]
+		'type' is always invalidated, detect tools config and do proper check, probably checking store types
+	☐ Give ignore tag comments meaninful names
+		i.e. 'extjs-ignore-1,2,3, etc need to be named appropriately e.g. extjs-ignore-xtype-validation
+
+Indexer:
+
+	☐ Should not re-index framework on re-indexing.
+		Prompt user, or detect a framework version change.  But 99.9% of the time it does not need to be re-indexed
+	✔ Indexer is noticeably slower after adding parsing of non Ext.define files in framework @done(23-04-24 01:15)
+		I think it is parsing inner-function function definitions, need only outer check
+		e.g. class files like Ext.util.DelayedTask
 
 JsDoc:
 
@@ -169,6 +199,7 @@ JsDoc:
 		hover over asrButton anywhere in the function shows nothing
 	✔ Multi-type tag does not get parsed, i.e. {Boolean|String}, parameter is missing in doc @done(21-09-21 22:31)
 	✔ Not working for extjsrc based projects on the 'framework' directory components @done(22-12-21 10:15)
+	☐ Links not working again.  For the most part.
 
 Miscellaneous:
 
