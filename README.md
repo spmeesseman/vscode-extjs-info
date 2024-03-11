@@ -1,5 +1,11 @@
 # ExtJs Intellisense - Code Completion, and More
 
+# PROJECT ON HOLD
+
+# IF YOU HAVE KIDS, HUG THEM EVERY CHANCE YOU GET
+
+# I LOST MY DAUGHTER, AND AM FOREVER BROKEN
+
 [![authors](https://img.shields.io/badge/authors-scott%20meesseman-6F02B5.svg?logo=visual%20studio%20code)](https://www.littlesm.com)
 [![Installs]( https://img.shields.io/visual-studio-marketplace/i/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs)
 [![Downloads](https://img.shields.io/visual-studio-marketplace/d/spmeesseman.vscode-extjs.svg)](https://marketplace.visualstudio.com/items?itemName=spmeesseman.vscode-extjs)
@@ -22,6 +28,9 @@ This extension has surpassed where I was going to take it.  Considering a pay sc
 ## Table of Contents
 
 - [ExtJs Intellisense - Code Completion, and More](#extjs-intellisense---code-completion-and-more)
+- [PROJECT ON HOLD](#project-on-hold)
+- [IF YOU HAVE KIDS, HUG THEM EVERY CHANCE YOU GET](#if-you-have-kids-hug-them-every-chance-you-get)
+- [I LOST MY DAUGHTER, AND AM FOREVER BROKEN](#i-lost-my-daughter-and-am-forever-broken)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Compared to Sencha Extension](#compared-to-sencha-extension)
